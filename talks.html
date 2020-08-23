@@ -1,283 +1,368 @@
 <html>
-<head>
-<title>Piyush Verma | Talks</title>
-<style type="text/css">
+  <head>
+    <title>Piyush Verma | Talks</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans:400,400i" rel="stylesheet">
+    <style type="text/css">
 html {
-  font: 14px Verdana, 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'IBM Plex Sans',"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 20px;
   background:#fff;
   color:#222;
   padding:15px
 }
 
-body {
-  min-height:180px;
-  color: #000;
-  background: #fff;
-  line-height: 1.5;
-  padding: 1em 0 0 2em;
-  margin: 0;
-  width: 600px;
-  text-align: justify;
+code {
+  font-family: 'IBM Plex Mono',monospace;
 }
+
+body {
+  text-align: justify;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 20px 50px 20px;
+}
+
 a {text-decoration: none}
 a:link, a:visited {color: #FF5800;}
 a img{border:0}
 
-h1,h2,h3 {
-  margin: 0;
-  padding: 0;
-  color: #000;
-  font-weight: normal;
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0;
+  font-family: 'IBM Plex Mono',monospace;
+  font-weight: 400;
+  line-height: 130%;
+  color: inherit;
+  text-rendering: optimizelegibility;
 }
 
-h1 { font-size: 21px; padding-bottom: 0.20em; line-height: 1; }
-h2 { font-size: 16px; margin: 18px 0 18px 0; border-bottom: 1px dotted}
-h3 { font-size: 12px; margin: 14px 0 14px 0; font-weight: bold; }
+p { margin: 20px 0 20px 0; }
 
-p { margin: 0; padding: 0; }
-p + p { margin-top: 1em; }
-</style>
+li{display: inline}
 
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
- (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
- m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
- })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-48012687-1', 'piyushverma.net');
-ga('require', 'displayfeatures');
-ga('send', 'pageview');
-</script>
+ins{color:#888;text-decoration:none}
+a {text-decoration: none}
+a:link, a:visited {color: #FF5800;}
+a img{border:0}
+    </style>
 
-</head>
-<body>
-<h2 id="free">Talks &amp; Public Speaking</h2>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-48012687-1', 'piyushverma.net');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    </script>
 
-  <h3>
-  Observability and control theory
-  Rootconf Hyderabad, India <small>2019</small>
-  <br/>
-  <small>
+  </head>
+
+  <body>
+    <ul class="connections" style="display: inline-block">
+      <li><a href="/">Home</a></li>
+      <li><ins>&nbsp;|&nbsp;</ins></li>
+      <li><a target="_blank" href="http://twitter.com/realmeson10">Twitter &#x29c9;</a></li>
+      <li><ins>&nbsp;|&nbsp;</ins></li>
+      <li><a target="_blank" href="http://github.com/meson10">Github &#x29c9;</a></li>
+      <li><ins>&nbsp;|&nbsp;</ins></li>
+      <li><a target="_blank" href="https://www.linkedin.com/in/meson10">LinkedIn &#x29c9;</a></li>
+    </ul>
+
+    <h1 id="free">Talks &amp; Public Speaking</h2>
+
+    <h2>2020</h2>
+
+    <h3>SLOs that Lie</h3>
+    <h5><a target="_blank" href="https://www.youtube.com/watch?v=9C3ndl0yOdc&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=21">#include at Gojek</a></h5>
+    <p>
+    At face value uptime is the easiest monitor to setup. But, when it matters it is one of the hardest SLO to set. As long as the values are low it’s simple <strong><code>Up / (Up+Down) %</code></strong><br/>
+    But when it starts crossing the 99.9x% mark is where this gets interesting. If something is checked only x seconds, was it always up or only up during the check? Who monitors the uptime of the uptime monitor?<br/>
+    As always, there is no silver bullet, just trade offs. The talk is a tale of these trade offs.<br/>
+    </p>
+
+    <h3>SRE War Stories 3/3</h3>
+    <h5>
+      <a target="_blank" href=https://www.youtube.com/watch?v=earFCjqWNj4&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=23&t=0s">Rootconf</a>
+    </h5>
+
+    <p>
+    Scars, Battle scars, and Expensive scars.<br/>
+    Most often than not, software engineers don’t know the operational challenges of their code - what can fail in production code.<br/>
+    Manjot Pahwa, Rishu Mehrotra, Kalyan Somasundaram, and I discuss:<br/>
+    - Google, LinkedIn and startup world view of SRE<br/>
+    - Often neglected area of work of an SRE - cost<br/>
+    - Cost of SRE and reliability<br/>
+    - Incident management<br/>
+    - Authority and roles<br/>
+    - Day-to-day and incident management<br/>
+    - Operational load and toil<br/>
+    </p>
+
+    <h3>Understanding the SRE Mindset and tools 2/3</h3>
+    <h5>
+      <a target="_blank" href=https://www.youtube.com/watch?v=t8kI8gNEZz4&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=2&t=0s">Rootconf</a>
+    </h5>
+
+    <p>
+    Pulumi or Terraform?<br/>
+    How much and what all to automate?<br/>
+    Automated vs automatic?<br/>
+    Ansible or K8s?<br/>
+    Serverless or needless?<br/>
+    Choices, choices, choices - and very expensive these choices are.<br/>
+    An attempt to lay out facts (from popular tech fiction) + trade-offs associated with these choices.<br/>
+    </p>
+
+    <h3>Doing Site Reliability Engineering the Right way 1/3</h3>
+    <h5>
+      <a target="_blank" href="https://www.youtube.com/watch?v=iUmB5ZY09_g&feature=emb_title">RootConf</a>
+    </h5>
+
+    <p>
+    Obsolete software == stable software.<br/>
+    Stability or release velocity?<br/>
+    Treat operations as product.<br/>
+    Reliability != uptime.<br/>
+    Reliability != buffet lunch. Pay for what you order.<br/>
+    Treat SLOs as gears.<br/>
+    Focus on SRE when \$ spend < \$ lost.<br/>
+    SRE Tenets - minimize downtime, find where else is it happening, prevent future failures.<br/>
+    SREs should be able to withstand boredom.<br/>
+    SRE maturity model.<br/>
+    </p>
+
+    <h2>2019</h2>
+    <h3>
+      Observability and control theory applied to Software
+    </h3>
+    <h5>
+      <a target="_blank" href="https://www.youtube.com/watch?v=2ivl8Hzp7QQ&list=PL279M8GbNsevd2F7UUVUxQlBzgaHAydsb">Rootconf Hyderabad, India</a>
+    </h5>
+
+    <p>
+    Software is opaque, To see what it’s doing you inject observation capability into it. This goes beyond logs & stepping through in a debugger for you have to observe the live system, not your sandbox. How does Control theory use observability to build systems that thrive on the feedback and improve?
     <a target="_blank" href="https://speakerdeck.com/meson10/observability-and-control-theory">
-      Slides &#x1F5D7;
-    </a> |
-    <a target="_blank" href="https://www.youtube.com/watch?v=2ivl8Hzp7QQ&list=PL279M8GbNsevd2F7UUVUxQlBzgaHAydsb">Video &#x1F5D7;</a>
-  </small>
-</h3>
-  
- <h3>
-  Reliability of Distributed Systems
-  Rootconf, India <small>2019</small>
-  <br/>
-  <small>
+      Slides &#x29c9;
+    </a>
+    </p>
+
+    <h3>
+      Reliability of Distributed Systems
+    </h3>
+    <h5>
+      <a target="_blank" href="https://www.youtube.com/watch?v=grEgDJVNIS0&list=PL52yEeK-aUTw1XhrgprSHXH1ERUNDDSVN&index=3&t=0s">Rootconf, India</a><br/>
+      <a target="_blank" href="https://www.youtube.com/watch?v=JmmvfWAeCms&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=14">DevopsDays, Bangalore</a><br/>
+      <a target="_blank" href="https://devopsdays.org/events/2019-berlin/program/piyush-verma">DevopsDays, Berlin</a>
+    </h5>
+
+    <p>
+    Every product either dies a hero or lives long enough to hit Reliability issues. While you go about fixing this, What is the cost, both in terms of effort and business lost, of failure and how much does each nine of reliability cost?
+
+    The talk considers a sample and straightforward product and evaluates the depths of each failure point. We take one fault at a time and introduce incremental changes to the architecture, the product, and the support structure like monitoring and logging to detect and overcome those failures.
     <a target="_blank" href="https://speakerdeck.com/meson10/reliability-of-distributed-systems">
-      Slides &#x1F5D7;
-    </a> |
-    <a target="_blank" href="https://www.youtube.com/watch?v=grEgDJVNIS0&list=PL52yEeK-aUTw1XhrgprSHXH1ERUNDDSVN&index=3&t=0s">Video &#x1F5D7;</a>
-  </small>
-</h3>
-  
-  <h3>
-  My TLS was/is Broken
-  Gophercon, India <small>2019</small>
-  <br/>
-  <small>
+      Slides &#x29c9;
+    </a>
+    </p>
+    </h3>
+
+    <h3>
+      My TLS was/is Broken
+    </h3>
+    <h5>
+      <a target="_blank" href="https://www.youtube.com/watch?v=aw2RE_9tE4o&list=PL52yEeK-aUTw1XhrgprSHXH1ERUNDDSVN&index=2&t=0s">Gophercon, India</a>
+    </h5>
+
+    <p>
+    TLS has come a long way and probably one of the least discussed topics in public Talks.
+
+    The talk walks through understanding Certs, how server-to-server TLS exchange happens. What is CRL and how do you detect Revocation Lists. Problem with CRL lists? What is OCSP and how does it solve the problem of CRLs. What is the problem with OCSP? What is OCSP Stapling? Why languages do not address the problems of identifying revocation and expired certs. How do we bring this all together to bring an actually trustable server to server exchange?
     <a target="_blank" href="https://speakerdeck.com/meson10/my-tls-was-broken">
-      Slides &#x1F5D7;
-    </a> |
-    <a target="_blank" href="https://www.youtube.com/watch?v=aw2RE_9tE4o&list=PL52yEeK-aUTw1XhrgprSHXH1ERUNDDSVN&index=2&t=0s">Video &#x1F5D7;</a>
-  </small>
-</h3>
-  
-<h3>
-  Structuring Organisations Using Tech Principles
-  Expert Talks, Pune, India <small>2018</small>
-  <br/>
-  <small>
+      Slides &#x29c9;
+    </a>
+
+    </p>
+    <h2>2018</h2>
+
+    <h3>
+      Structuring Organisations as Distributed Systems
+    </h3>
+    <h5>
+      <a target="_blank" href="https://www.youtube.com/watch?v=INFrGxXFYJY&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=2">Expert Talks, India </a>
+    </h5>
+
+    <p>
+    You know Single Responsibility Principle, Dependency Inversion Principle, and SOLID design pattern. You know DRY, loose coupling, CAP theorem. You have probably also heard of benefits of Functional Programming. Can one apply these learning and Programming principles to scale an organization as well?
     <a target="_blank" href="https://speakerdeck.com/meson10/technology-that-builds-organizations-06b2970b-14af-4091-9c42-7be8bed9bf2e">
-      Slides &#x1F5D7;
-    </a> |
-    <a target="_blank" href="https://www.youtube.com/watch?v=INFrGxXFYJY&list=PL52yEeK-aUTw1XhrgprSHXH1ERUNDDSVN&index=3&t=0s">Video &#x1F5D7;</a>
-  </small>
-</h3>
-  
-<h3>
-  Namespaces.go
-  Gophercon, India <small>2018</small>
-  <br/>
-  <small>
-    <a target="_blank" href="https://speakerdeck.com/meson10/namespace-dot-go">
-      Slides &#x1F5D7;
-    </a> |
-    <a target="_blank" href="https://www.youtube.com/watch?v=OGBu-NTXsXs">Video &#x1F5D7;</a>
-  </small>
-</h3>
+      Slides &#x29c9;
+    </a>
+    </p>
 
-<h3>
-  Understanding Cgroups & NameSpaces in Linux
-  Linux-Lab, Florence, Italy - <small>December, 2017</small>
-  <br/>
-  <small>
-    <a target="_blank" href="https://speakerdeck.com/meson10/cgroups-and-namespaces-in-linux">Slides &#x1F5D7;</a>
-  </small>
-</h3>
+    </h3>
 
-<h3>
-  Understanding Distributed Data Processing<br/>
-  ExpertsTalk, Equal Experts, Pune - <small>November, 2017</small>
-  <br/>
-  <small>
+    <h3>
+      Anatomy of a Container
+    </h3>
+    <h5>
+      <a target="_blank" href="https://www.youtube.com/watch?v=dizUgIbiKM8&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=13&t=0s">Gophercon, Vietnam</a><br/>
+      <a target="_blank" href="https://www.youtube.com/watch?v=OGBu-NTXsXs&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=8">Gophercon, India </a></h3>
+    </h5>
+
+    <p>
+    What are Containers and How is Docker made? It's a bunch of namespaces and cgroups put together to build the process isolations that we see. What are namespaces and how do they operate? The talk invokes one Linux namespace at a time, as system calls from a Golang code, up to a full-fledged container.<a target="_blank" href="https://speakerdeck.com/meson10/namespace-dot-go">
+      Slides &#x29c9;
+    </a>
+    </p>
+
+    <h2>2017</h2>
+    <h3>
+      Understanding Cgroups & NameSpaces in Linux
+    </h3>
+    <h5>
+      <a href="https://www.youtube.com/watch?v=NS8XC6Qv4ow&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=10L">Linux-Lab, Florence</a>
+    </h5>
+
+    <p>
+    Cgroups and Namespace are the shoes and shorts of the container race, not in any particular order. They have been around for a while but not too many see the usage and power they have. The talk is a consortium of cookbooks where these were used to sole Infrastructure problems I have encountered.
+    <a target="_blank" href="https://speakerdeck.com/meson10/cgroups-and-namespaces-in-linux">Slides &#x29c9;</a>
+    </p>
+
+    <h3>
+      ABC of Distributed Data Processing
+    </h3>
+    <h5>
+      <a href="https://www.youtube.com/watch?v=tKuCoKDPPEQ&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=9">ExpertsTalk - Pune</a><br/>
+      Distributed Systems Meetup, Thoughtworks, Pune
+    </h5>
+
+    <p>
+    The talk is an anatomy of the data processing systems, their building blocks, methods & purpose. We split the system into layers; defining the relevance, need, & behavior of each. We study common frameworks & tools, what layer do they fit in & later showcasing typical architectures and deployments.
     <a target="_blank" href="https://speakerdeck.com/meson10/understanding-the-basics-of-data-analysis">
-      Slides &#x1F5D7;
-    </a> |
-    <a target="_blank" href="https://www.youtube.com/watch?v=tKuCoKDPPEQ">Video &#x1F5D7;</a>
-  </small>
-</h3>
-
-<h3>
-  HTTP: Can we do better than that?<br/>
-  Redis India Tour, Mumbai - <small>October, 2017</small>
-  <br/>
-  <small>
-    <a target="_blank" href="https://speakerdeck.com/meson10/http-can-we-do-better">Slides &#x1F5D7;</a>
-  </small>
-</h3>
-
-<h3>
-  ABC of Distributed Data Processing<br/>
-  Distributed Systems Meetup, Thoughtworks, Pune - <small>July, 2017</small>
-  <br/>
-  <small>
-    <a target="_blank" href="https://speakerdeck.com/meson10/abc-of-distributed-data-processing">Slides &#x1F5D7;</a>
-  </small>
-</h3>
-
-<h3>
-  Designing Scalable & Distributed Systems using &amp; Gilmour<br/>
-  GopherCon, London - <small>August, 2016</small>
-  <br/>
-  <small>
-    <a target="_blank" href="https://www.youtube.com/watch?v=rDQTBpIWa7M&list=PL52yEeK-aUTw1XhrgprSHXH1ERUNDDSVN&index=1">Video &#x1F5D7;</a>
-  </small>
-</h3>
-
-<h3>
-  Design Patterns in Micro-services architectures &amp; Gilmour<br/>
-  Rootconf, Bangalore - <small>April, 2016</small>
-  <br/>
-  <small>
-    <a target="_blank" href="http://www.slideshare.net/PiyushVerma42/design-patterns-in-microservices-architectures-gilmour-61071816">
-      Slides &#x1F5D7;
-    </a> |
-    <a target="_blank" href="https://youtu.be/GNTHQgb5OGY">Video &#x1F5D7;</a>
-  </small>
-</h3>
-
-<h3>
-  Microservices architecutes using Gilmour.<br/>
-  Gophercon, Dubai - <small>February, 2016</small>
-  <br/>
-  <small>
-    <a target="_blank" href="https://speakerdeck.com/meson10/micro-services-architectures-using-gilmour">
-      Slides &#x1F5D7;
+      Slides &#x29c9;
     </a>
-  </small>
-</h3>
+    </p>
 
-<h3>
-  Microservices architecutes using Gilmour.<br/>
-  Gophercon, Bangrelore - <small>February, 2016</small>
-  <br/>
-  <small>
-    <a target="_blank" href="https://docs.google.com/presentation/d/1DmNELsa-okvsKEHc79zjO1M6GfNNpANXumWr1E0zuS8/pub?start=true&loop=false&delayms=5000">
-      Slides &#x1F5D7;
-    </a> |
-    <a target="_blank" href="https://youtu.be/G_9741n5e5A?list=PLxFC1MYuNgJT_ynbXGuYAZbSnUnq-6VQA">
-      Video &#x1F5D7;
-    </a>
-  </small>
-</h3>
+    <h3>
+      HTTP: Can we do better than that?
+    </h3>
+    <h5>
+      Redis India Tour
+    </h5>
 
-<h3>
-  Patterns in Distributed Systems &amp; how Gilmour addresses those.<br/>
-  DeccanRubyConf, Pune - <small>August, 2015</small>
-  <br/>
-  <small>
-    <a target="_blank" href="http://go-talks.appspot.com/github.com/gilmour-libs/slides/gilmour.slide#1">
-      Details &#x1F5D7;
-    </a> |
-    <a target="_blank" href="https://www.youtube.com/watch?v=ydqa_28FTCk&list=PLdBNOee0vmiJM__IYjFuNl7MM0niT8U8c">
-      Video &#x1F5D7;
-    </a>
-  </small>
-</h3>
+    <p>
+    How much does your application weigh when you build it using HTTP Constructs?
+    Can you achieve the same availability and reliability using another alternatives?
+    <a target="_blank" href="https://speakerdeck.com/meson10/http-can-we-do-better">Slides &#x29c9;</a>
+    </p>
 
-<h3>
-  Why we used (a lot of) Go at our Python shop.<br/>
-  Golang Meetup, Pune - <small>June, 2015</small>
-  <br/>
-  <small>
-    <a target-"_blank" href="http://go-talks.appspot.com/github.com/meson10/golang-pune-meetup/golang-pune-meetup.slide#1">
-      Details &#x1F5D7;
-    </a>
-  </small>
-</h3>
+    <h2>2016</h2>
+    <h3>
+      Designing Scalable & Distributed Systems using &amp; Gilmour
+    </h3>
+    <h5>
+      <a target="_blank" href="https://www.youtube.com/watch?v=rDQTBpIWa7M&list=PL52yEeK-aUTw1XhrgprSHXH1ERUNDDSVN&index=1">GopherCon, London</a><br/>
+      <a target="_blank" href="https://www.youtube.com/watch?v=GNTHQgb5OGY&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=4">Rootconf, Bangalore</a><br/>
+      Gophercon, Dubai<br/>
+      <a target="_blank" href="https://www.youtube.com/watch?v=G_9741n5e5A&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=6">Gophercon, Bangalore</a><br/>
+      <a target="_blank" href="https://www.youtube.com/watch?v=ydqa_28FTCk&list=PLdBNOee0vmiJM__IYjFuNl7MM0niT8U8c">Deccan RubyConf, India</a><br/>
+      <a target="_blank" href="https://2016.devfest-berlin.de/schedule/#session-2203D">Berlin</a>
+      <br/>
+    </h5>
 
-<h3>
-  Analysing your CDN Usage.<br/>
-  FossAsia, Singapore - <small>March, 2015</small>
-</h3>
+    <p>
+    Microservices have rapidly evolved over the years as a popular way of developing applications. But they bring their own set of challenges in the form of what design pattern to use, monitoring, logging, error detection, scaling and service discovery.<br/>
+    The talk explores the common characteristics and design patterns to be considered while dealing with service oriented architectures. It also talks about Signal-Slots, RPC architectures, monitoring, log and error handling, function point scaling, and common unix philosophies that help you design scalable distributes systems.<br/>
+    Diving into code samples, demos and production deployments; I would like to showcase <a href="http://github.com/gilmour-libs">Gilmour</a>, a cross language library we have authored for effective microservices that exchange data over non-HTTP transports.
+    <a target="_blank" href="https://www.slideshare.net/PiyushVerma42/design-patterns-in-microservices-architectures-gilmour-61071816">Slides &#x29c9;</a>
+    </p>
 
-<h3>
-  Gottp: A micro backend framework in Golang.<br/>
-  Gophercon India, Bangalore - <small>February, 2015</small>
-  <br/>
-  <small>
-    <a target="_blank" href="http://lanyrd.com/2015/gopherconindia/sddwpk/">
-      Details &#x1F5D7;
-    </a> |
-    <a target="_blank" href="https://www.youtube.com/watch?v=JkCwOdWb1y0&index=22&list=PLxFC1MYuNgJTY3uQ5Ja4F5Sz305nnrBOq">
-      Video &#x1F5D7;
-    </a>
-  </small>
-</h3>
+    <h3>Behaviour Driven Oops using Traits</h3>
+    <h5><a target="_blank" href="https://2016.devfest-berlin.de/schedule/#session-2203D">Devfest - Berlin</a></h5>
 
-<h3>
-  Interview: Gopher Piyush Verma.<br/>
-  <small>January, 2015</small>
-  <br/>
-  <small>
-    <a target="_blank" href="http://www.gophercon.in/blog/2015/01/23/piyush/">Read &#x1F5D7;</a>
-  </small>
-</h3>
+    <p>
+    We all build software, and we see ourselves using OOP in some manner or the other. Inheritance is one of the core properties of OOP. What are the common variants of Inheritance? Single, multiple, and mixin based inheritance.<br/>
+    All of these suffer from conceptual and practical limitations. Ir-respective of the choice of language, our design ends up the same way. Usually a mesh of interconnected types. As the size of the project goes and we introduce more types, the complexity and cost of testing that system keeps increasing. The Internet is full of memes on that. We go about identifying and illustrating these problems. <br/>
+    We then talk about traits. A trait is essentially a group of pure methods that compose classes and is a primitive unit of code reuse.<br/>
+    In this model, classes are composed from a set of traits by specifying glue code that connects the traits together and accesses the necessary state. We demonstrate how traits overcome these problems, and help you build simpler and reusable code.<br/>
+    This talk is based on a research paper published in <a href="http://www.ptidej.net/courses/ift6251/fall06/presentations/061122/061122.doc.pdf">Traits: Composable Units of Behaviour"</a>
+    </p>
 
-<h3>
-  Build a High Capacity Queue Task Processor with MongoDB in Production.<br/>
-  MongoDB Pune, Pune - <small>October, 2012</small>
-  <br/>
-  <small>
-    <a target="_blank" href="http://lanyrd.com/2012/mongodbpune/syyzq/">Details &#x1F5D7;</a>
-  </small>
-</h3>
+    <h2>2015</h2>
 
-<h3>
-  Interview: People Behind KDE.<br/>
-  <small>January, 2008</small>
-  <br/>
-  <small>
-    <a target="_blank" href="https://behindkde.org/summer-code-2007-14">Read &#x1F5D7;</a>
-  </small>
-</h3>
+    <h3>
+      Why we used (a lot of) Go at our Python shop.
+    </h3>
+    <h5>
+      <a href="https://www.meetup.com/Golang-Pune/events/223377075/">Golang Meetup, Pune</a>
+    </h5>
+    <p>
+    <a target="_blank" href="https://go-talks.appspot.com/github.com/meson10/golang-pune-meetup/golang-pune-meetup.slide#1">Slides &#x29c9;</a>
+    </p>
 
-<h3>
-  KDevelop4: Beyond C++ &amp; extending the language base</br>
-  Foss.In, Bangalore - <small>December, 2007</small>
-  <br/>
-  <small>
+    <h3>Analysing your CDN Usage for Profit</h3>
+    <h5>FossAsia, Singapore</h5>
+    <p>
+    <a href="https://github.com/cdnlysis">CDNlysis</a> syncs Amazon Cloudfront log entries from S3 bucket and streams them to multiple database backends. You can later query for:<br/>
+    - Understanding how the Bandwidth is being used.<br/>
+    - Finding out the most popular and most downloadable content.<br/>
+    - Generate trends for your most popular Videos, Audios, Slides etc.<br/>
+    - Understand geographical behaviour of the Requests.<br/>
+    - Amount of Bytes transferred to & fro the Cloudfront distributions.<br/>
+    - Find out the most profitable referrer from where your content is being accessed. etc.<br/>
+    </p>
+
+
+    <h3>Gottp: A micro backend framework in Golang.</h3>
+    <h5>
+      <a target="_blank" href="https://www.youtube.com/watch?v=JkCwOdWb1y0&list=PL34DUQtgvo5GndgNtpSp_HLRkEK95zfhM&index=14&t=0s">Gophercon India, Bangalore</a>
+    </h5>
+    <p>
+    <a href="https://github.com/meson10/gottp">Gottp</a> was designed using backend servers in mind and offered:<br/>
+    - Background Workers<br/>
+    - Call Aggregation using Non-Blocking or Blocking Pipes.<br/>
+    - Optionally Listens on Unix Domain socket.<br/>
+    - In-built error traceback emails.<br/>
+    - Optional data compression using zlib/gzip.<br/>
+    - Automatic listing of all exposed URLs<br/>
+    </p>
+
+    <h3>Interview: Gopher Piyush Verma.</h3>
+
+    <h2>2012</h2>
+
+    <h3>
+      Build a High Capacity Queue Task Processor with MongoDB in Production.
+    </h3>
+    <h5>
+      MongoDB Pune
+    </h5>
+
+    <p>
+    We called it "Party", a Persistent Queue processor responsible for handling all the non real-time stuff varying from Video encoding, Indexing Search Documents, Updating cache, tracking participant progress, sending out emails, payments, releasing Node.js sockets etc.
+    <a target="_blank" href="http://lanyrd.com/2012/mongodbpune/syyzq/">Details &#x29c9;</a>
+    </p>
+
+    <h2>2008</h2>
+    <h3>
+      Interview: People Behind KDE.
+    </h3>
+    <p>
+    <a target="_blank" href="https://behindkde.org/summer-code-2007-14">Read &#x29c9;</a>
+    </p>
+
+    <h3>
+      KDevelop4: Beyond C++ &amp; extending the language base
+    </h3>
+    <h5>
+      Foss.In, Bangalore
+    </h5>
+
+    <p>
     <a target="_blank" href="https://docs.google.com/presentation/d/1Pxu1TMLnZwQW7MEOiApXPdEvcqL1Xj6490YNDlwbb4I/edit?usp=sharing">
-      Details &#x1F5D7;
+      Details &#x29c9;
     </a>
-  </small>
-</h3>
+    </p>
 
-</body>
+  </body>
 </html>
